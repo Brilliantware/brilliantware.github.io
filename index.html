@@ -9,12 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #14091f;
-    --bg-2: #1f0f33;
-    --fg: #f3eefc;
-    --muted: #9d86c2;
-    --pink: #ff2ea6;
-    --cyan: #2ee6ff;
+    --bg: #170b2e;
+    --bg-2: #3a1758;
+    --fg: #fdf3e7;
+    --muted: #b895c9;
+    --pink: #ff4d8d;
+    --orange: #ff9142;
+    --yellow: #ffd23f;
+    --cyan: #2de2c2;
   }
 
   * {
@@ -71,21 +73,12 @@
     font-size: clamp(1.4rem, 5.5vw, 2.75rem);
     line-height: 1.4;
     margin: 0 0 1.25rem;
-    background: linear-gradient(90deg, var(--pink), var(--cyan));
+    background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 0 0 18px rgba(255, 46, 166, 0.35), 0 0 30px rgba(46, 230, 255, 0.25);
+    text-shadow: 0 0 18px rgba(255, 77, 141, 0.35), 0 0 30px rgba(255, 145, 66, 0.3);
     letter-spacing: 0.02em;
-  }
-
-  h1 .divider {
-    display: inline-block;
-    width: 0.09em;
-    height: 1.35em;
-    margin: 0 0.3em;
-    background: var(--fg);
-    vertical-align: -0.28em;
   }
 
   p.tagline {
@@ -99,13 +92,13 @@
   a {
     color: var(--cyan);
     text-decoration: underline;
-    text-decoration-color: rgba(46, 230, 255, 0.4);
+    text-decoration-color: rgba(45, 226, 194, 0.4);
     text-underline-offset: 3px;
   }
 
   a:hover {
-    color: var(--pink);
-    text-decoration-color: var(--pink);
+    color: var(--yellow);
+    text-decoration-color: var(--yellow);
   }
 
   /* retro grid horizon */
@@ -114,8 +107,8 @@
     z-index: 2;
     height: 90px;
     background-image:
-      linear-gradient(rgba(46, 230, 255, 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(46, 230, 255, 0.5) 1px, transparent 1px);
+      linear-gradient(rgba(255, 145, 66, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 145, 66, 0.5) 1px, transparent 1px);
     background-size: 40px 40px;
     -webkit-mask-image: linear-gradient(to top, black, transparent);
     mask-image: linear-gradient(to top, black, transparent);
