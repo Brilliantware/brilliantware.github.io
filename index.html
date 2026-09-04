@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brillant|Ware</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14091f;
+    --bg-2: #1f0f33;
+    --fg: #f3eefc;
+    --muted: #9d86c2;
+    --pink: #ff2ea6;
+    --cyan: #2ee6ff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, var(--bg-2), transparent),
+      var(--bg);
+    color: var(--fg);
+    font-family: "Space Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* subtle scanlines for CRT feel */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    z-index: 1;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(1.4rem, 5.5vw, 2.75rem);
+    line-height: 1.4;
+    margin: 0 0 1.25rem;
+    background: linear-gradient(90deg, var(--pink), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 18px rgba(255, 46, 166, 0.35), 0 0 30px rgba(46, 230, 255, 0.25);
+    letter-spacing: 0.02em;
+  }
+
+  h1 .divider {
+    display: inline-block;
+    width: 0.09em;
+    height: 1.35em;
+    margin: 0 0.3em;
+    background: var(--fg);
+    vertical-align: -0.28em;
+  }
+
+  p.tagline {
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 30rem;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  a {
+    color: var(--cyan);
+    text-decoration: underline;
+    text-decoration-color: rgba(46, 230, 255, 0.4);
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--pink);
+    text-decoration-color: var(--pink);
+  }
+
+  /* retro grid horizon */
+  .grid {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+    background-image:
+      linear-gradient(rgba(46, 230, 255, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(46, 230, 255, 0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: linear-gradient(to top, black, transparent);
+    mask-image: linear-gradient(to top, black, transparent);
+    transform: perspective(200px) rotateX(35deg);
+    transform-origin: bottom;
+    opacity: 0.6;
+  }
+
+  footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 1.25rem 1.5rem 1.5rem;
+    font-size: 0.7rem;
+    color: var(--muted);
+    background: var(--bg);
+  }
+
+  footer p {
+    margin: 0.3rem 0;
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <h1>Brillant.Ware</h1>
+  <p class="tagline">
+    The development division of
+    <a href="https://brilliantcloud.co.za/" target="_blank" rel="noopener">Brilliant Cloud</a>.
+  </p>
+</main>
+
+<div class="grid"></div>
+
+<footer>
+  <p>&copy; 2026 Brillant|Ware &mdash; a division of Brilliant Cloud</p>
+  <p><a href="https://brilliantcloud.co.za/" target="_blank" rel="noopener">brilliantcloud.co.za</a></p>
+</footer>
+
+</body>
+</html>
